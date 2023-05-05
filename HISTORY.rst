@@ -3,6 +3,19 @@
 History
 =======
 
+1.0.0 (2023-05-04)
+------------------
+
+* Added type hints.
+* Removed `setup.py` in favor of `pyproject.toml`.
+* Removed empty `requirements.txt` file.
+* Removed `todo.txt`.
+* Added numpy-style docstrings.
+* Renamed functions to comply with python snake-case conventions.
+* Changed modifier functions to private with prefixed underscore.
+* Added Black as code formatter
+* Added isort as import sorter
+
 0.1.1 (2017-03-27)
 ------------------
 

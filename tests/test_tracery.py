@@ -1,15 +1,11 @@
-#!/usr/bin/env python
-# -*- coding: utf8 -*-
+#!/usr/bin/env python3
+
 """
 Unit tests for pytracery
 """
 from __future__ import print_function, unicode_literals
+from typing import Optional
 import unittest
-
-import sys
-import os.path
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 
 import tracery
 from tracery.modifiers import base_english
@@ -57,12 +53,12 @@ class TestPytracery(unittest.TestCase):
         self.grammar = tracery.Grammar(test_grammar)
         self.grammar.add_modifiers(base_english)
 
-    def assert_starts_with(self, a, b, msg=None):
+    def assert_starts_with(self, a: str, b: str, msg: Optional[str]=None):
         self.assertTrue(
             a.startswith(b),
             msg or "{} does not start with {}".format(a, b))
 
-    def assert_ends_with(self, a, b, msg=None):
+    def assert_ends_with(self, a: str, b: str, msg:  Optional[str]=None):
         self.assertTrue(
             a.endswith(b),
             msg or "{} does not end with {}".format(a, b))

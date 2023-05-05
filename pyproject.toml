@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tracery3"
+version = "1.0.0"
+description = "Python port of Kate Compton's tracery text generation library"
+authors = [
+    { name = "Shi Johnson-Bey", email = "shijbey@gmail.com" },
+]
+readme = "README.rst"
+requires-python = ">=3.8"
+keywords = [
+    "tracery"
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Topic :: Artistic Software",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed"
+]
+
+[tool.setuptools]
+packages = ["tracery"]
+
+[project.optional-dependencies]
+development = [
+    "black",
+    "black[d]",
+    "build"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ShiJbey/pytracery3"
+"Bug Tracker" = "https://github.com/ShiJbey/pytracery3/issues"
+"Repository" = "https://github.com/ShiJBey/pytracery3.git"
+"Changelog" = "https://github.com/ShiJbey/pytracery3/blob/main/CHANGELOG.rst"
+"Documentation" = "https://shijbey.github.io/pytracery3/"
+
+[project.scripts]
+neighborly = "tracery.__main__:main"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+default_section = "THIRDPARTY"
+known_first_party = "tracery"
+src_paths = ["tracery", "tests"]
+
+[tool.pyright]
+reportMissingTypeStubs = "none"

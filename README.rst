@@ -23,11 +23,11 @@ Installation
 
 Install with pip like so::
 
-    pip install tracery
+    pip install tracery3
 
 You can also download the source code and install manually::
 
-    python setup.py install
+    python -m pip install "."
 
 Usage
 -----
@@ -71,9 +71,9 @@ You can run the module on a JSON Tracery grammar file on the command line to out
 
 For example::
 
-    $ python -m tracery potterpapers.json 
+    $ python -m tracery potterpapers.json
     Harry Potter and the Tchebyshev transforms of the first and second kind
-    
+
     $ python -m tracery potterpapers.json 3
     Harry Potter and the Impact of Extremes in Outdoor Temperature and Sunshine Exposure on Birth Weight.
     Harry Potter and the Chromatin Remodelling Enzymes SNF2H and SNF2L Position Nucleosomes adjacent to CTCF and Other Transcription Factors.
@@ -100,4 +100,3 @@ This port inherits Tracery's original Apache License 2.0.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-

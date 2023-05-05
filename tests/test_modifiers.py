@@ -1,21 +1,14 @@
-#!/usr/bin/env python
-# -*- coding: utf8 -*-
-"""
-Unit tests for pytracery
-"""
-from __future__ import print_function
-import unittest
+#!/usr/bin/env python3
+"""Unit tests for pytracery."""
 
-import sys
-import os.path
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
+from __future__ import annotations
+
+import unittest
 
 from tracery import modifiers
 
 
 class TestModifiers(unittest.TestCase):
-
     def test_replace(self):
         # Arrange
         text = "a big ship"
@@ -31,7 +24,7 @@ class TestModifiers(unittest.TestCase):
         text = "abc def"
 
         # Act
-        output = modifiers.capitalizeAll(text)
+        output = modifiers.capitalize_all(text)
 
         # Assert
         self.assertEqual(output, "Abc Def")
@@ -41,7 +34,7 @@ class TestModifiers(unittest.TestCase):
         text = "abc def"
 
         # Act
-        output = modifiers.capitalize_(text)
+        output = modifiers.capitalize(text)
 
         # Assert
         self.assertEqual(output, "Abc def")
@@ -131,7 +124,7 @@ class TestModifiers(unittest.TestCase):
         text = "elephant in a phonebox"
 
         # Act
-        output = modifiers.firstS(text)
+        output = modifiers.first_s(text)
 
         # Assert
         self.assertEqual(output, "elephants in a phonebox")
@@ -141,7 +134,7 @@ class TestModifiers(unittest.TestCase):
         text = "ELEPHANT IN A PHONEBOX"
 
         # Act
-        output = modifiers.firstS(text)
+        output = modifiers.first_s(text)
 
         # Assert
         self.assertEqual(output, "ELEPHANTs IN A PHONEBOX")
@@ -329,5 +322,3 @@ class TestModifiers(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-# End of file

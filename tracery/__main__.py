@@ -1,24 +1,23 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-Output an example line from a JSON Tracery grammar.
-"""
-from __future__ import print_function, unicode_literals
+#!/usr/bin/env python3
+
+"""The Tracery commandline interface."""
+
 import argparse
 import json
 
 import tracery
 from tracery.modifiers import base_english
 
-if __name__ == "__main__":
+
+def main():
     parser = argparse.ArgumentParser(
         description="Output an example line from a JSON Tracery grammar.",
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument("json", help="Input JSON file")
     parser.add_argument(
-        "json", help="Input JSON file")
-    parser.add_argument(
-        "number", type=int, default=1, nargs="?",
-        help="Number of lines to generate")
+        "number", type=int, default=1, nargs="?", help="Number of lines to generate"
+    )
     args = parser.parse_args()
 
     with open(args.json) as data_file:
@@ -27,7 +26,9 @@ if __name__ == "__main__":
     grammar = tracery.Grammar(rules)
     grammar.add_modifiers(base_english)
 
-    for i in range(args.number):
+    for _ in range(args.number):
         print(grammar.flatten("#origin#"))
 
-# End of file
+
+if __name__ == "__main__":
+    main()
