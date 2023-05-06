@@ -7,6 +7,7 @@ name = "tracery3"
 version = "1.0.0"
 description = "Python port of Kate Compton's tracery text generation library"
 authors = [
+    { name = "Allison Parrish", email = "allison@decontextualize.com" },
     { name = "Shi Johnson-Bey", email = "shijbey@gmail.com" },
 ]
 readme = "README.rst"
@@ -48,7 +49,7 @@ development = [
 "Documentation" = "https://shijbey.github.io/pytracery3/"
 
 [project.scripts]
-neighborly = "tracery.__main__:main"
+tracery = "tracery.__main__:main"
 
 [tool.black]
 line-length = 88
