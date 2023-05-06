@@ -42,11 +42,9 @@ development = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/ShiJbey/pytracery3"
 "Bug Tracker" = "https://github.com/ShiJbey/pytracery3/issues"
-"Repository" = "https://github.com/ShiJBey/pytracery3.git"
-"Changelog" = "https://github.com/ShiJbey/pytracery3/blob/main/CHANGELOG.rst"
-"Documentation" = "https://shijbey.github.io/pytracery3/"
+"Repository" = "https://github.com/ShiJBey/pytracery3"
+"Changelog" = "https://github.com/ShiJbey/pytracery3/blob/main/History.rst"
 
 [project.scripts]
 tracery = "tracery.__main__:main"
