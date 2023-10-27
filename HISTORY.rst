@@ -3,6 +3,11 @@
 History
 =======
 
+1.0.1 (2023-10-26)
+------------------
+* Updated `MANIFEST.in` to include `tracery/py.typed` file to fix mypy error.
+
+
 1.0.0 (2023-05-04)
 ------------------
 

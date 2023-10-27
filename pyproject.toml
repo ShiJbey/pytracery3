@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tracery3"
-version = "1.0.0"
+version = "1.0.1"
 description = "Python port of Kate Compton's tracery text generation library"
 authors = [
     { name = "Allison Parrish", email = "allison@decontextualize.com" },
@@ -12,9 +12,7 @@ authors = [
 ]
 readme = "README.rst"
 requires-python = ">=3.8"
-keywords = [
-    "tracery"
-]
+keywords = ["tracery"]
 license = { file = "LICENSE" }
 classifiers = [
     "License :: OSI Approved :: Apache Software License",
@@ -28,18 +26,14 @@ classifiers = [
     "Natural Language :: English",
     "Topic :: Artistic Software",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "Typing :: Typed"
+    "Typing :: Typed",
 ]
 
 [tool.setuptools]
 packages = ["tracery"]
 
 [project.optional-dependencies]
-development = [
-    "black",
-    "black[d]",
-    "build"
-]
+development = ["black", "black[d]", "build"]
 
 [project.urls]
 "Bug Tracker" = "https://github.com/ShiJbey/pytracery3/issues"
